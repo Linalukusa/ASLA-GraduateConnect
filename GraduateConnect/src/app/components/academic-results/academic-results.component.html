@@ -1,0 +1,400 @@
+           <div class="wrapper">
+                <app-sidebar></app-sidebar>
+
+
+                <div class="container">
+                    <div class="row">
+                      <div class="col-sm-2">
+                      
+                      </div>
+                      <div class="col-lg">
+                          <div class="example-container" >
+                              <div  >
+                                <div>
+                              <h2 class="text-center">Academic Information</h2>
+                              </div>
+                              <hr>
+                          
+                          <form [formGroup]="addForm"(ngSubmit)=" submitAcademicData()" novalidate>
+                      
+                              <div class="form-group">
+                                           <br>
+
+
+                                           
+                                  <div class="row">
+                                    <h3 class="text-center">Qualification</h3>
+                                    <ol>
+                                      <!-- <button class="btn btn-success" (click)="openQualDialog()">Add A Qual</button> -->
+                                   <li *ngIf="mylang">
+                  Qualifications: <i>{{myqual}}</i>
+                                   </li>
+                                   </ol>
+                                  </div>
+                                  <hr>
+                                    <div class="row">
+                                            <div class="col-3">
+                                              Year of completion: 
+                                              <select formControlName="year" class="form-control" >
+                                                    <option value="" disabled='disabled' style="color:rgb(199, 196, 196)" >Select Year</option>
+                                                  <option>2018</option>
+                                                  <option>2017</option>
+                                                  <option>2016</option>
+                                                  <option>2015</option>
+                                                  <option>2014</option>
+                                                  <option>2013</option>
+                                                  <option>2012</option>
+                                                  <option>2011</option>
+                                                  <option>2010</option>
+                                                  <option>2009</option>
+                                              </select>
+                                            </div>
+                                            <div class="col-9">
+                                                    Tertiary Institution Completed At:
+                                                    <select class="form-control" formControlName="institution">
+                                                            <option value="" disabled='disabled' style="color:rgb(199, 196, 196)" >Select Tertiary Institution</option>
+                                                            <option>University of Cape Town</option>
+                                                            
+                                                            <option>Univeristy of Western Cape </option>
+                                                            
+                                                            <option>Univeristy of Stellenbosch</option>
+                                                            
+                                                            <option>University of KwaZulu Natal</option>
+                                                            
+                                                            <option>The University of Wits</option>
+                                                            
+                                                            </select>
+                                            </div>
+                                          </div>
+                                     </div>
+                    
+                                     <div class="form-group">
+                    
+                                        
+                                        </div>
+                                        
+                                      <div class="row">
+                                            <div class="col">
+                                              Qualification:
+                                              <select formControlName="qualification" class="form-control" >
+                                                    <option value="" disabled='disabled' style="color:rgb(199, 196, 196)" >Select Qualififcation</option>
+                                                    <option>Diploma</option>
+                                                    
+                                                    <option>Bachelors</option>
+                                                    
+                                                    <option>Masters</option>
+                                                    
+                                                    <option>Honours</option>
+                                                    
+                                                    <option>Doctorate</option>
+                                                    
+                                                    </select>
+                                            
+                                          </div>  
+                                      </div>
+                                      <div class="form-group" >
+                    
+                                        
+                                        </div>
+                    
+                                          <div class="row">
+                                                <div class="col">
+                                                  Specialisation:
+                                                  <select formControlName="specialisation" class="form-control" >
+                                                        <option value="" disabled='disabled' style="color:rgb(199, 196, 196)" >Select Specialisation</option>
+                                                        <option>Information Systems</option>
+                                                        
+                                                        <option>Computer Science </option>
+                                                        
+                                                        <option>Information Systems & Computer Science</option>
+                                                        
+                                                        <option>Computer Enginnering</option>
+                                                        
+                                                        <option>Staticstics and Computer Science</option>
+                                                        
+                                                        </select>
+                                                
+                                              </div>    
+                                              <div class="col">
+                                                    Program:
+                                                    <select formControlName="program" class="form-control" >
+                                    
+                                                            <option value=""  style="color:rgb(199, 196, 196)" >Select Program</option>
+                                                          <option>Bachelor of Commerce</option>
+                                                          
+                                                          <option> Bachelor of Business Science</option>
+                                                          
+                                                          <option>Bachelor of Science</option>
+                                                          
+                                                          <option>Bachalor of Enginnering</option>
+                                                          
+                                                          </select>
+                                                  
+                                                </div>   
+                                              </div> 
+                                  
+                                  
+                                 
+                                  
+                                  <hr> 
+                            
+                                   
+
+                                 
+<div *ngFor="let course of resultCollection">
+    <input type="text" [(ngModel)]="course.coursecode"> 
+    <input type="text" [(ngModel)]="course.CourseDesc"> 
+  <input type="text" [(ngModel)]="course.nqfcredit"> 
+  <input type="text" [(ngModel)]="course.resultperc"> 
+</div>
+
+                                   
+                                          <hr>
+                                           <div class="form-group">
+                    
+                                                
+                                                <div class="row">
+                                                    <div class="col">
+                                                       
+                                                           <h3 class="text-center">Academic Results</h3>
+                                                           <h4 class="text-center"> Enter your academic results for all your ICTS related courses <br>from your most recently completed academic year.</h4>
+
+                                                    </div>
+                                                    
+                                                      </div>                          
+                                                
+                                                               </div>
+                    
+                                                               <div class="row">
+                                                                    <div class="col-5">
+                                                                            <div  class="form-group">
+                                                                                    Course Description:
+                                                                                    <input    formControlName="course"
+                                                                                    placeholder="eg Systems Development Project "
+                                                                                  
+                                                                                    class="form-control"
+                                                                                   >
+                                                                                  </div>
+                                                                    </div>
+                                                                    <div class="col">
+                                                                            <div  class="form-group">
+                                                                                    Course Code:
+                                                                                    <input    formControlName="coursecode"
+                                                                                    placeholder="eg INF3003"
+                                                                                    name="coursecode"
+                                                                                    class="form-control"
+                                                                                    id="coursecode">
+                                                                                  </div>
+                                                                    </div>
+                                                                    <div class="col-2">
+                                                                            <div  class="form-group">
+                                                                                    NQF Credits:
+                                                                                    <input   type="number" formControlName="nqfcredit"
+                                                                                    placeholder="credits"
+                                                                                    name="coursecredits"
+                                                                                    class="form-control"
+                                                                                    id="coursecredits">
+                                                                                  </div>
+                                                                    </div>
+                                                                    <div class="col-2">
+                                                                            <div  class="form-group">
+                                                                                    Result:
+                                                                                    <input   type="number" formControlName="result"
+                                                                                    placeholder="(%)"
+                                                                                    name="course result"
+                                                                                    class="form-control"
+                                                                                    id="courseresult">
+                                                                                  </div>
+                                                                          </div>
+                                                                 
+                                                                  <div class="row">
+                                                    <div class="col">
+                                                        
+                                                    </div>
+                                                    
+                                                     </div> 
+                    </div>
+                                                     
+                                            <hr>
+                                          
+                                            <!-- </div> -->
+
+                                              <!-- <div class="row">
+                                                  <div class="col">
+                                                      
+                                                  </div>
+                                                  
+                                                   </div> -->
+                                              <hr>
+                                         
+                                            <div class="col">
+                                                <div class="addmore" class="form-group text-right" >
+                                                  <button
+                                                  class="btn btn-success"
+                                                 
+                                                  (click)="addCourse()"
+                                                  >Add more Courses</button>
+                                                  </div>
+              
+                                           </div>  
+                                         
+                    <hr>
+                    <div class="row">
+                        <div class="col">
+                          </div>
+                          <div class="col-sm-8">
+                              <div class="dropzone dropzonecontent pre html"
+                              dropzone
+                              (hovered)="toggleHover($event)"
+                              (dropped)="onDrop($event)"
+                              [class.hovering]="isHovering">
+                         
+                              
+                              Please Upload Your Transcript
+                              <div class="file">
+                                 <label class="file-label">
+                                 <input class="file-input" type="file" (change)="onDrop($event.target.files)">
+                              <span class="file-cta">
+                                     <span class="file-icon">
+                                       <i class="fa fa-upload"></i>
+                                     </span>
+                                    
+                                   </span>
+                                 </label>
+                               </div>
+                         </div>
+                         
+                            </div>
+                            <div class="col">
+                              </div>
+                          </div>
+                 
+    
+                  
+    
+                  <div class="row">
+                        <div class="col">
+                            
+                        </div>
+                        
+                          <div class="col">
+                            
+                            </div>
+                        
+                         </div>
+    
+                      <!-- <uploader>
+                      </uploader> -->
+                        
+                      <div class="form-group">
+    
+                        
+                          </div>
+                          
+                         
+                         
+                                            
+                                            <!-- <div class="row">
+                                                <div class="col">
+                                                    <h3 class="text-center">Language(s)</h3>
+                                                    </div>
+
+                                                    <div class="col">
+
+                                                      <ol>
+                                                        <button class="btn btn-success" (click)="openDialog()">Add A Language</button>
+                                                     <li *ngIf="mylang">
+                                                        Languages Chosen: <i>{{mylang}}</i>
+                                                     </li>
+                                                     </ol>
+
+                                                      </div>
+                                          
+                                                      <div class="col">
+                                                        </div>
+                                                      
+                                                  </div> -->
+
+                                                      
+                                            <!-- <div class="row">
+                                                <h3 class="text-center">Language(s)</h3>
+                                                   
+                                              </div> -->
+                                       
+                                      
+                 
+                                              <div class="form-group">
+                 
+                                     
+                                                  </div>
+                                                  
+                                            <!-- <hr>
+                    Languages chosen: -->
+                    
+                                           
+                                               
+                                            
+<!--                       
+                                                  <div class="form-group">
+                      
+                                          
+                                                      </div>
+                              
+                                                      <br>
+                                                      <div class="row">
+                                                              <h3 class="text-center">Skill(s)</h3>
+                                                                  
+                                                            </div>
+                                                      
+                                                      <hr>
+                              
+                              
+                                                     <div class="row">
+                                                          <div class="col">
+                                                              Select Skills:
+                                                                  <select formControlName="skill"class="form-control"  data-required="true" autocomplete="off" id="skillsselect" >
+                                                                          <option value="" style="color:#999;">Search for skills</option>
+                                                                         
+                                                                          <option>Other</option>
+                                                                          </select>
+                                                          </div>
+                                                          <div class="col">
+                                                              Level of Knowledge:
+                                                                  <select formControlName="levelofknowledge"  data-required="true" autocomplete="off" id="lang_2_level" class="form-control">
+                                                                          <option value="" disabled='disabled' style="color:rgb(199, 196, 196)">Level of knownledge</option>
+                                                                          
+                                                                          <option value="5">Beginner</option>
+                                                                          <option value="4">Basic</option>
+                                                                          <option value="3">Moderate</option>
+                                                                          <option value="2">Good</option>
+                                                                          <option value="1">Expert</option>
+                                                                          </select>
+                                                          </div>
+                                                        </div>
+                               -->
+                                                        <div class="form-group">
+                              
+                                                  
+                                                          </div>
+                               
+                                                          
+                                                          <div class="form-group text-right">
+                                                              <button type="button" class="btn btn-secondary gap-right" (click)="ResetForm()">Reset</button>
+                                                              <button type="submit" class="btn btn-success" (click)="next()" [disabled]="!addForm.valid">Submit Details</button>
+                                                            </div>
+                                                    
+                                            </form>
+                                            
+                      
+                                            
+                                            </div>
+                                            
+                                          
+                      </div>
+                      <div class="col-md">
+                      </div>
+                    </div>
+                  </div>
+
+
+            </div>

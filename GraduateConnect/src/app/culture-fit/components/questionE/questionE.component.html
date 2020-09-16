@@ -1,0 +1,236 @@
+<div class="wrapper">
+  <div class="example-container" >
+    <h2 class="text-center">Culture Fit Assessment</h2>
+    <br>
+    <h2 class="text-center"> Question 5: </h2>
+    <br>
+
+   
+    <p> Please order the statements below from most relatable to least. <br> Drag and Drop the statements that you
+      associate most strongly with yourself to the <strong>TOP</strong> of the list.</p>
+    <div class="question">
+      <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+        <div class="example-box" color="accent" *ngFor="let question of questions" cdkDrag>{{question}}</div>
+      </div>
+      <div>
+          <br>
+          <button type="submit" mat-dialog-close  ali="center" class="btn btn-success" (click)="onScoreTotal()" >Continue</button>
+        <br>
+          </div>
+    </div>
+  </div>
+
+</div>
+  <!-- <form [formGroup]="cultureForm" (ngSubmit)="submitCultureData()" display="none" novalidate>
+    <div class="formGroup">
+      <div class=form-group>
+        <div >
+          dominant
+          <input type="text" formControlName="dominant" class="form-control" required>
+    
+        </div>
+        <div >
+          precise
+          <input type="text" formControlName="Precise" class="form-control" required>
+    
+        </div>
+        <div >
+         earth
+          <input type="text" formControlName="Earth" class="form-control" required>
+    
+        </div>
+        <div >
+          animated
+          <input type="text" formControlName="Animated" class="form-control" required>
+    
+        </div>
+        <div >
+         convincing
+          <input type="text" formControlName="Convincing" class="form-control" required>
+    
+        </div>
+        <div >
+          accommodate
+          <input type="text" formControlName="Accommodate" class="form-control" required>
+    
+        </div>
+        <div >
+         introvert
+          <input type="text" formControlName="Introvert" class="form-control" required>
+    
+        </div>
+        <div >
+         headstrong
+          <input type="text" formControlName="Headstrong" class="form-control" required>
+    
+        </div>
+
+    </div> -->
+  
+  <!-- </div>
+            </form> -->
+
+<!--
+<div class="header">
+        <h1> Culture Fit Assessment </h1>
+        <h2> Question 5: </h2>
+        <p> Please rank each statement from <strong> 1 (Strongly Disagree) </strong> to <strong> 8 (Strongly Agree) </strong> <br> Each statement must have its own unique number: </p>
+        <div class="question">
+          <p><b> 1. I can best de described as competitive and decisive </b></p>
+
+          <section class="example-section">
+            <mat-form-field class="example-margin">
+              <input matInput type="number" placeholder="Value" [(ngModel)]="obj.Dominance">
+            </mat-form-field>
+            
+          </section>
+          <mat-slider class="slider"
+            thumbLabel
+            [displayWith]="formatLabel"
+            tickInterval="1000"
+            min="1"
+            max="8" 
+            [(ngModel)]="obj.Dominance">
+           
+          </mat-slider>
+        </div>
+        <div class="question">
+          <p><b> 2. I can best be described as poised, persuasive and optimistic</b></p>
+
+          <section class="example-section">
+            <mat-form-field class="example-margin">
+              <input matInput type="number" placeholder="Value" [(ngModel)]="obj.Convincing">
+            </mat-form-field>
+            
+          </section>
+          <mat-slider class="slider"
+            thumbLabel
+            [displayWith]="formatLabel"
+            tickInterval="1000"
+            min="1"
+            max="8"
+            [(ngModel)]="obj.Convincing">
+          </mat-slider>
+        </div>
+        <div class="question">
+          <p><b> 3. I can be best described as team-focused, reliable and persistent </b></p>
+
+          <section class="example-section">
+            <mat-form-field class="example-margin">
+              <input matInput type="number" placeholder="Value" [(ngModel)]="obj.Earth">
+            </mat-form-field>
+            
+          </section>
+          <mat-slider class="slider"
+            thumbLabel
+            [displayWith]="formatLabel"
+            tickInterval="1000"
+            min="1"
+            max="8"
+            [(ngModel)]="obj.Earth">
+          </mat-slider>
+        </div>
+        <div class="question">
+          <p><b> 4. I can be best described as precise, systematic and compliant </b></p>
+
+          <section class="example-section">
+            <mat-form-field class="example-margin">
+              <input matInput type="number" placeholder="Value" [(ngModel)]="obj.Precise">
+            </mat-form-field>
+            
+          </section>
+          <mat-slider class="slider"
+            thumbLabel
+            [displayWith]="formatLabel"
+            tickInterval="1000"
+            min="1"
+            max="8"
+            [(ngModel)]="obj.Precise">
+          </mat-slider>
+        </div>
+      </div>
+      
+        <div class="question">
+          <p><b> 5. I can best be described as diplomatic and modest </b></p>
+
+          <section class="example-section">
+            <mat-form-field class="example-margin">
+              <input matInput type="number" placeholder="Value" [(ngModel)]="obj.Accommodate">
+            </mat-form-field>
+            
+          </section>
+          <mat-slider class="slider"
+            thumbLabel
+            [displayWith]="formatLabel"
+            tickInterval="1000"
+            min="1"
+            max="8"
+            [(ngModel)]="obj.Accommodate">
+          </mat-slider>
+        </div>
+        <div class="question">
+          <p><b> 6. I can be describe as intuitive, introspective and exploring </b></p>
+
+          <section class="example-section">
+            <mat-form-field class="example-margin">
+              <input matInput type="number" placeholder="Value" [(ngModel)]="obj.Introvert">
+            </mat-form-field>
+            
+          </section>
+          <mat-slider class="slider"
+            thumbLabel
+            [displayWith]="formatLabel"
+            tickInterval="1000"
+            min="1"
+            max="8"
+            [(ngModel)]="obj.Introvert">
+          </mat-slider>
+        </div>
+        <div class="question">
+          <p><b> 7. I can best be described as eager, outgoing and mobile </b></p>
+
+          <section class="example-section">
+            <mat-form-field class="example-margin">
+              <input matInput type="number" placeholder="Value" [(ngModel)]="obj.Headstrong">
+            </mat-form-field>
+            
+          </section>
+          <mat-slider class="slider"
+            thumbLabel
+            [displayWith]="formatLabel"
+            tickInterval="1000"
+            min="1"
+            max="8"
+            [(ngModel)]="obj.Headstrong">
+          </mat-slider>
+        </div>
+        <div class="question">
+          <p><b> 8. I can best be described as unconventional, creative and independent </b></p>
+          <section class="example-section">
+            <mat-form-field class="example-margin">
+              <input matInput type="number" placeholder="Value" [(ngModel)]="obj.Animated">
+            </mat-form-field>
+            
+          </section>
+          <mat-slider class="slider"
+            thumbLabel
+            [displayWith]="formatLabel"
+            tickInterval="1000"
+            min="1"
+            max="8"
+            [(ngModel)]="obj.Animated">
+          </mat-slider>
+        </div>
+        
+        <div *ngIf="!hide">
+          <button mat-button color="accent" (click)="onScoreTotal()"> Submit </button>
+        </div>
+        <div *ngIf="hide">  
+          <button mat-button color="accent" (click)="closeDialog(); onSubmit();"> Show Results </button>
+        </div>
+        
+       
+      
+      
+      
+       -->
