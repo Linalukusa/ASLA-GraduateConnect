@@ -17,6 +17,6 @@ ng serve (to run the project on localhost:4200)
 
 ![2020-09-16 (4)](https://user-images.githubusercontent.com/48994734/93282885-a95da900-f7cf-11ea-83b4-60f40f296c09.png)
 
+![2020-09-16 (2)](https://user-images.githubusercontent.com/48994734/93282894-afec2080-f7cf-11ea-99b9-56cf4b80f43f.png)
 ![2020-09-16 (1)](https://user-images.githubusercontent.com/48994734/93282916-b9758880-f7cf-11ea-83d2-2f84e8f57e8c.png)
 
-![2020-09-16 (2)](https://user-images.githubusercontent.com/48994734/93282894-afec2080-f7cf-11ea-99b9-56cf4b80f43f.png)
