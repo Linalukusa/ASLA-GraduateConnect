@@ -10,3 +10,4 @@ QUICK START npm install
 cd GraduateConnect
 
 ng serve (to run the project on localhost:4200)
+![2020-09-16](https://user-images.githubusercontent.com/48994734/93282489-cf367e00-f7ce-11ea-8522-6554cd82353c.png)
